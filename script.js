@@ -56,3 +56,14 @@ const generatePassword = (
 
   passInput.value = password;
 };
+
+
+// dark mode
+
+document.getElementById("darkmode").addEventListener("click", function () {
+  var elemento = document.getElementById("darkmode");
+  elemento.classList.toggle("active");
+
+  document.body.classList.toggle("darkColor");
+});
+
