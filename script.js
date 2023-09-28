@@ -60,10 +60,35 @@ const generatePassword = (
 
 // dark mode
 
+// Função para ativar o modo escuro
+function enableDarkMode() {
+  document.body.classList.add("darkColor");
+}
+
+// Função para desativar o modo escuro
+function disableDarkMode() {
+  document.body.classList.remove("darkColor");
+}
+
+// Verifica as preferências do usuário e ativa/desativa o modo escuro
+function updateDarkModePreference() {
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (prefersDarkMode) {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+}
+
+// Chame a função inicialmente para configurar o modo de acordo com a preferência do usuário
+updateDarkModePreference();
+
+// Adicione um ouvinte de eventos ao botão para alternar manualmente
 document.getElementById("darkmode").addEventListener("click", function () {
   var elemento = document.getElementById("darkmode");
   elemento.classList.toggle("active");
-
   document.body.classList.toggle("darkColor");
 });
+
 

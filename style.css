@@ -24,11 +24,12 @@ body.darkColor{
 
 main {
   padding: 20px;
-  box-shadow: 0 1px 10px #E36414;
+  
   display: flex;
   flex-direction: column;
   gap: 15px;
   border-radius: 10px;
+  height: 550px;
 }
 
 .darkColor main{
@@ -120,7 +121,7 @@ input[type=range] {
   width: 24px;
   height: 24px;
   border: 1px solid rgb(245, 245, 247);
-  background-color: rgb(245, 245, 247);
+  background-color: #212121;
 }
 
 .theme__icon > :nth-child(2) {
@@ -194,7 +195,7 @@ input[type=range] {
   top: 50%;
   left: 100%;
   transform: translateY(-50%);
-  background-color: #212121;
+  background-color: #f7f7f7;
   transition: top .4s, left .4s;
   transition-delay: .2s;
   z-index: 20;
